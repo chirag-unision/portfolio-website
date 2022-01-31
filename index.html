@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar" class="nav-hide">
+        <div>
+            <img src="https://www.hazzir.in/images/photos/chirag_founder_ceo.jpg" alt="">
+            <span>Chirag Kaushik</span>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li><a id="close-btn" onclick="closesidebar()">&times;</a></li>
+                <li><a href="#med">About Us</a></li>
+                <li><a href="#med-after">Portfolio</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="#footer">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="toggle-btn" id="toggle-btn" onclick="opensidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div class="top" id="top">
+        <section>
+            <div id="glare"></div>
+            <img id="devimage" src="https://www.hazzir.in/images/photos/chirag_founder_ceo.jpg" alt="">
+            <div class="comply">
+                <p>Hey! I'm Chirag Kaushik</p>
+                <p>I am a Web Developer. I can build both static and dynamic websites and webapps.</p>
+            </div>
+        </section>
+        <ul>
+            <li><a href="#med">About Us</a></li>
+            <li><a href="#med-after">Portfolio</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="#footer">Contact Us</a></li>
+        </ul>
+    </div>
+    <div id="back_cover"></div>
+    <div class="med" id="med">
+        <div>
+            <p style="font-size: xx-large; font-weight: 600; margin-top: 10px;">About Us</p>
+            <div style="width:120px;height:5px;background:linear-gradient(to right, #EF5FE2 30%, #5551E4 70%, #62EAC6 100%);margin-top:-15px;"></div>
+        </div>
+        <div class="container" id="txt"></div>
+        <div>
+            <p style="font-size: xx-large; font-weight: 600; margin-top: 10px;">Skill Stack</p>
+            <div style="width:120px;height:5px;background:linear-gradient(to right, #EF5FE2 30%, #5551E4 70%, #62EAC6 100%);margin-top:-15px;"></div>
+        </div>
+        <div class="ddrls">
+            <div class="skill-stack">
+                <div id="ico_0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" alt=""></div>
+                <div id="ico_1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt=""></div>
+                <div id="ico_2"><img src="https://www.freepnglogos.com/uploads/javascript-png/javascript-shield-logo-icon-2.png" alt=""></div>
+                <div id="ico_3"><img src="https://cdn.freebiesupply.com/logos/thumbs/2x/jquery-1-logo.png" alt=""></div>
+                <div id="ico_4"><img src="https://logos-download.com/wp-content/uploads/2016/09/React_logo_wordmark.png" alt=""></div>
+                <div id="ico_5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" alt=""></div>
+                <div id="ico_6"><img src="https://download.logo.wine/logo/MySQL/MySQL-Logo.wine.png" alt=""></div>
+                <div id="ico_7"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png" alt=""></div>
+                <div id="ico_8"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Logo.min.svg/2560px-Logo.min.svg.png" alt=""></div>
+                <div id="ico_9"><img src="https://www.docker.com/sites/default/files/d8/2019-07/horizontal-logo-monochromatic-white.png" alt=""></div>
+            </div>
+            <div id="item-stack"></div>
+        </div>
+    </div>
+    <div id="back_cover2"></div>
+    <div class="med-after" id="med-after">
+        <p class="headline">Portfolio</p>
+        <div class="xlss">
+            <div>
+                <div id="descript">
+                    <h1>Hazzir.in</h1><br />
+                    <div style="width:120px;height:5px;background:linear-gradient(to right, #EF5FE2 30%, #5551E4 70%, #62EAC6 100%);margin-top:-30px;"></div><br />
+                    <span>Hazzir is an online marketplace which deals with buying and selling of regular services. It helps in creating online presense of the talented service sellers, improving their sale standard and building a good consumer-seller relationship.</span><br /><br />
+                    <span>Written in: <span class="text-primary">HTML, CSS, JAVASCRIPT and PHP</span></span><br />
+                    <span>Developers: <span class="text-primary">Chirag Kaushik</span></span><br /><br />
+                    <button id="website-link" class="magic-btn">Visit the Website</button>
+                </div>
+            </div>
+            <img id="hzimg" src="website_hz.png" alt="">
+        </div>
+    </div>
+    <div id="back_cover3"></div>
+    <div class="bottom">
+        <p class="headline">OTHER PROJECTS</p>
+        <div class="crddr">
+            <div id="fi_card">
+                <div id="fi_image"><img src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/2659/posts/37331/image-upload/Devfolio%20Free%20HTML%20Website%20Template.jpg" alt=""></div>
+                <div id="fi_info">
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <p>HTML, CSS, PHP, JavaScript</p><hr>
+                    <div>
+                        <div>
+                            <i class="fa fa-html5" style="padding: 2px 0; color: black" aria-hidden="true"> HTML & CSS</i>
+                            <div style="float: left; width: 100%;">
+                                <div style="float: left; height: 10px; background: linear-gradient(to right, #EF5FE2 30%, #5551E4 70%, #62EAC6 100%); border-radius: 10px; width: 60%;"></div>
+                            </div>
+                        </div>
+                        <div><i class="fa fa-js-square" style="padding: 2px 0; color: black;" aria-hidden="true"> JavaScript</i>
+                            <div style="float: left; width: 100%;">
+                                <div style="float: left; height: 10px; background: linear-gradient(to right, #EF5FE2 30%, #5551E4 70%, #62EAC6 100%); border-radius: 10px; width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div><i class="fa fa-php" style="padding: 2px 0; color: black;" aria-hidden="true"> PHP</i>
+                            <div style="float: left; width: 100%;">
+                                <div style="float: left; height: 10px; background: linear-gradient(to right, #EF5FE2 30%, #5551E4 70%, #62EAC6 100%); border-radius: 10px; width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div><br>
+                </div>
+            </div>
+            <div id="fi_card">
+                <div id="fi_image"><img src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/2659/posts/37331/image-upload/Devfolio%20Free%20HTML%20Website%20Template.jpg" alt=""></div>
+                <div id="fi_info">
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <p>HTML, CSS, PHP, React.JS</p><hr>
+                    <div>
+                        <div>
+                            <i class="fa fa-html5" style="padding: 2px 0; color: black" aria-hidden="true"> HTML & CSS</i>
+                            <div style="float: left; width: 100%;">
+                                <div style="float: left; height: 10px; background: linear-gradient(to right, #EF5FE2 30%, #5551E4 70%, #62EAC6 100%); border-radius: 10px; width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div><i class="fa fa-js-square" style="padding: 2px 0; color: black;" aria-hidden="true"> JavaScript</i>
+                            <div style="float: left; width: 100%;">
+                                <div style="float: left; height: 10px; background: linear-gradient(to right, #EF5FE2 30%, #5551E4 70%, #62EAC6 100%); border-radius: 10px; width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div><i class="fa fa-php" style="padding: 2px 0; color: black;" aria-hidden="true"> PHP</i>
+                            <div style="float: left; width: 100%;">
+                                <div style="float: left; height: 10px; background: linear-gradient(to right, #EF5FE2 30%, #5551E4 70%, #62EAC6 100%); border-radius: 10px; width: 50%;"></div>
+                            </div>
+                        </div>
+                    </div><br>
+                </div>
+            </div>
+            <div id="fi_card">
+                <div id="fi_image"><img src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/2659/posts/37331/image-upload/Devfolio%20Free%20HTML%20Website%20Template.jpg" alt=""></div>
+                <div id="fi_info">
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <p>HTML, CSS, PHP, JavaScript</p><hr>
+                    <div>
+                        <div>
+                            <i class="fa fa-html5" style="padding: 2px 0; color: black" aria-hidden="true"> HTML & CSS</i>
+                            <div style="float: left; width: 100%;">
+                                <div style="float: left; height: 10px; background: linear-gradient(to right, #EF5FE2 30%, #5551E4 70%, #62EAC6 100%); border-radius: 10px; width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div><i class="fa fa-js-square" style="padding: 2px 0; color: black;" aria-hidden="true"> JavaScript</i>
+                            <div style="float: left; width: 100%;">
+                                <div style="float: left; height: 10px; background: linear-gradient(to right, #EF5FE2 30%, #5551E4 70%, #62EAC6 100%); border-radius: 10px; width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div><i class="fa fa-php" style="padding: 2px 0; color: black;" aria-hidden="true"> PHP</i>
+                            <div style="float: left; width: 100%;">
+                                <div style="float: left; height: 10px; background: linear-gradient(to right, #EF5FE2 30%, #5551E4 70%, #62EAC6 100%); border-radius: 10px; width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="quiz-box">
+        <span>Do you want to test your Web Dev knowledge? Lets play a web dev quiz..</span>
+        <button id="quiz-link" class="magic-btn">Play Quiz</button>
+    </div>
+    <div class="footer" id="footer">
+        <div>
+            <p>Your Name</p>
+            <input type="text" name="" id="">
+            <p>Email</p>
+            <input type="text" name="" id="">
+            <p>Message</p>
+            <input type="text" name="" id=""><br /><br />
+            <button class="btn btn-outline-primary">Submit</button>
+        </div>
+        <div>
+            <div class="m-4">
+                <p class="m-0">Contact Us:</p>
+                <p>Email: sha12213@gmail.com</p>
+            </div>
+            <div class="m-4">
+                <p class="m-0">Based in:</p>
+                <p>Karnal, Haryana</p>
+            </div>
+            <div class="m-4" style="font-size: x-large;">
+                <p class="m-0">Follow us on:</p>
+                <i class="fa fa-facebook p-2"></i>
+                <i class="fa fa-instagram p-2"></i>
+                <i class="fa fa-twitter p-2"></i>
+            </div>
+        </div>
+        <div class="d-flex flex-column justify-content-end m-2 align-items-end">
+            <div id="live-clock"></div>
+            <div>Developed and Designed by Chirag Kaushik</div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+let navbar = document.getElementById("navbar");
+window.addEventListener("scroll", ()=> {
+    var y = window.scrollY;
+    if (y >= 500) {
+        navbar.className= "nav-show"
+    } else {
+        navbar.className= "nav-hide"
+    }
+});
+let des = document.getElementById("descript");
+window.addEventListener("scroll", ()=> {
+    var y = window.scrollY;
+    if (y >= 900) {
+        des.className= "des-show"
+    } else {
+        des.className= "des-hide"
+    }
+});
+let hzimg = document.getElementById("hzimg");
+window.addEventListener("scroll", ()=> {
+    var y = window.scrollY;
+    if (y >= 900) {
+        hzimg.className= "hz-show"
+    } else {
+        hzimg.className= "hz-hide"
+    }
+});
+let charArray= 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate aut, consectetur eligendi dolorem fugit, numquam tempore vitae aliquid explicabo quas dicta aliquam repellat, commodi natus nisi. Iusto culpa tempora quae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus amet ab, itaque, blanditiis quam totam repellendus laborum eaque asperiores odit, quasi at reiciendis cum voluptatum repudiandae ratione vitae? Quas, voluptas! Lorem, ipsum dolor sit amet consectetur adipisicing elit.';
+charArray= charArray.split("");
+let n= 0;
+charprint= setInterval(() => {
+    char= charArray[n];
+    document.getElementById('txt').append(char);
+    n++;
+    if(n >= charArray.length) {
+        clearInterval(charprint);
+    }
+}, 10);
+
+// JS
+function opensidebar() {
+    document.getElementById('sidebar').classList.add('active');
+
+}
+function closesidebar() {
+    document.getElementById('sidebar').classList.remove('active');
+}
+
+$(document).ready(function(){
+    setTimeout(() => {
+        document.getElementById('devimage').classList.add('devimage');
+        document.getElementsByClassName('comply')[0].classList.add('aftertext');
+        document.getElementById('glare').classList.add('glare');
+    }, 1000);
+    sessionStorage.setItem('i', 0);
+    let itemArr= ['HTML', 'CSS', 'JavaScript', 'JQuery', 'React.JS', 'PHP', 'MySQL', 'Bootstrap', 'Laravel', 'Docker']
+    setInterval( () => {
+        let i= sessionStorage.getItem('i');
+        divarr= $('.skill-stack #ico_'+i);
+        divarr.addClass('show-icon').siblings().removeClass('show-icon');
+        stack= document.getElementById('item-stack');
+        item= document.createElement('div');
+        item.setAttribute('class', 'item');
+        item.append(itemArr[i]);
+        stack.prepend(item);
+        i++;
+        if(i == 10){i= 0; stack.innerHTML= '';}
+        sessionStorage.setItem('i', i);
+    }, 3000);
+    $('#website-link').on('click', ()=> {
+        window.location.href= 'https://www.hazzir.in';
+    });
+    $('#quiz-link').on('click', ()=> {
+        window.location.href= 'quiz.html';
+    })
+    setInterval(() => {
+        const date = new Date();
+        document.getElementById('live-clock').innerHTML= date.toLocaleTimeString('en-US')
+    }, 1000);
+});
+
+</script>
+
+

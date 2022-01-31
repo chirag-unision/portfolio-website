@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="quiz.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url('https://media.istockphoto.com/photos/question-mark-on-colorful-paper-picture-id1306017915?b=1&k=20&m=1306017915&s=170667a&w=0&h=D_6RqCE1lIYhaU6FsAzvNU11diUxseHVTzCydd23vNY=');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container {
+            width: 60%;
+            box-shadow: 1px 5px 5px #ccc;
+            border-radius: 10px;
+            margin-top: 10px;
+            text-align: center;
+            padding: 10px;
+            background: white;
+        }
+        h4 {
+            text-align: left;
+            padding: 10px;
+        }
+        .card {
+            text-align: left;
+            cursor: default;
+        }
+        #timer {
+            font-size: xx-large;
+            padding: 10px;
+            color: rgb(184, 0, 0);
+        }
+        @media all and (max-width: 500px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Dev Quiz!</h1>
+    <div class="container">
+        <h4>Hey! Are you ready to have Web Dev Quiz?</h4>
+        <div style="width:200px;height:4px;background:linear-gradient(to right, #EF5FE2 30%, #5551E4 70%, #62EAC6 100%);margin-top:-10px;margin-left:10px;"></div><br />
+        <botton id="startBtn" class="btn btn-success" onclick="startTest()">Start Quiz</botton>
+        <div id="timer"></div>
+        <div id="content"></div>
+    </div>
+</body>
+</html>
+
+<script>
+    let parent= document.getElementById('content');
+    parent.innerHTML='';
+    let ini= 0;
+    let result= false;
+    let resultRecord= 0;
+    let timer= 4;
+    let counter= 60;
+    
+    function loadData() {
+            result= false;
+            element= data[ini];
+            parent.innerHTML=
+            '<div class="card" style="width: 50rem;">'+
+                '<div class="card-header">'+element.question+'</div>'+
+                '<ul class="list-group list-group-flush">'+
+                    '<li id="opt_'+ini+'a" class="list-group-item" onclick="checkAns(\'A\', \'opt_'+ini+'a\')">a). '+element.optionA+'</li>'+
+                    '<li id="opt_'+ini+'b" class="list-group-item" onclick="checkAns(\'B\', \'opt_'+ini+'b\')">b). '+element.optionB+'</li>'+
+                    '<li id="opt_'+ini+'c" class="list-group-item" onclick="checkAns(\'C\', \'opt_'+ini+'c\')">c). '+element.optionC+'</li>'+
+                    '<li id="opt_'+ini+'d" class="list-group-item" onclick="checkAns(\'D\', \'opt_'+ini+'d\')">d). '+element.optionD+'</li>'+
+                '</ul>'+
+            '</div>'
+            ;
+    }
+    function checkAns(check, id) {
+        if(!result)
+        if(check == data[ini].answer) {
+            document.getElementById(id).style.backgroundColor= 'lawngreen';
+            result= true;
+            resultRecord= resultRecord+1;
+        } else {
+            document.getElementById(id).style.backgroundColor= 'red';
+        }
+        setTimeout(() => {
+            if(ini < 9) {
+                ini= ini+1;
+                loadData();
+            } else {
+                showReport();
+            }
+        }, 2000);
+    }
+    
+    function showReport() {
+        document.getElementsByTagName('h4')[0].innerHTML= 'Quiz is over..';
+        fin= resultRecord>6?'Pass':'Fail'; 
+        parent.innerHTML=
+            '<div class="card" style="width: 50rem;">'+
+                '<div class="card-header">Quiz Report:</div>'+
+                '<ul class="list-group list-group-flush">'+
+                    '<li id="" class="list-group-item">Total Question Asked: '+data.length+'</li>'+
+                    '<li id="" class="list-group-item">Answered Correctly: '+resultRecord+'</li>'+
+                    '<li id="" class="list-group-item">Result: '+fin+'</li>'+
+                '</ul>'+
+            '</div>'
+            ;
+    }
+    
+    function startTest() {
+        loadData();
+        document.getElementById('startBtn').style.display= 'none';
+        document.getElementsByTagName('h4')[0].innerHTML= 'Quiz has started..';
+        timerFunc= setInterval(() => {
+            if(timer == 0 & counter == 0) {
+                showReport();
+                clearInterval(timerFunc);
+                return;
+            }
+            if(counter == 0) {
+                timer= timer-1;
+                counter= 60;
+            }
+            counter= counter-1;
+            document.getElementById('timer').innerHTML= timer+':'+counter;
+        }, 1000);
+    }
+</script>
